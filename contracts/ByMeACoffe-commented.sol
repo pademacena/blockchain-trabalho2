@@ -35,7 +35,7 @@ contract BuyMeACoffee is Ownable {
     }
 
     // Endereço do implantador do contrato. Marcado a pagar para que
-    // podemos retirar para este endereço mais tarde.
+    // possamos retirar para este endereço mais tarde.
 
     // Lista de todos os memorandos recebidos de compras de café.
     Memo[] memos;
@@ -72,7 +72,7 @@ contract BuyMeACoffee is Ownable {
         require(msg.value > 0, "can't buy coffee for free!");
         string memory _coffeesize = regularCoffee;
 
-        // Adicione o memorando ao armazenamento!
+        // Adiciona o memorando ao armazenamento!
         memos.push(
             Memo(msg.sender, block.timestamp, _name, _message, _coffeesize)
         );
@@ -139,8 +139,7 @@ import "../utils/Context.sol";
  * pode ser alterado posteriormente com {transferOwnership}.
  *
  * Este módulo é usado por herança. Ele disponibilizará o modificador
- * `onlyOwner`, que pode ser aplicado às suas funções para restringir seu uso a
- * o dono.
+ * `onlyOwner`, que pode ser aplicado às suas funções para restringir seu uso ao dono.
  */
 abstract contract Ownable is Context {
     address private _owner;
@@ -218,8 +217,8 @@ pragma solidity ^0.8.0;
 /**
  * @dev Fornece informações sobre o contexto de execução atual, incluindo o
  * remetente da transação e seus dados. Embora estes estejam geralmente disponíveis
- * via msg.sender e msg.data, eles não devem ser acessados de forma tão direta
- * maneira, pois ao lidar com meta-transações a conta enviando e
+ * via msg.sender e msg.data, eles não devem ser acessados de forma tão direta,
+ * pois ao lidar com meta-transações a conta enviando e
  * pagando pela execução pode não ser o remetente real (no que diz respeito a um aplicativo
  * está preocupado).
  *
